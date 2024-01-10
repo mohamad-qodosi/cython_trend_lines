@@ -108,7 +108,7 @@ cdef np.ndarray[np.float64_t] low_trend_lines_at_last_timestamp(np.ndarray[np.fl
 @cython.boundscheck(False)
 @cython.wraparound(False)
 def high_trend_lines(high_values: np.ndarray, lookback_freq: int, dont_look_freq: int):
-    high = np.pad(high,((lookback_freq - 1, 0)), constant_values=np.nan)
+    high_values = np.pad(high_values,((lookback_freq - 1, 0)), constant_values=np.nan)
     values = np.empty(len(high_values), dtype=np.float64)
     cdef np.ndarray[np.float64_t] high_trend
 
@@ -126,7 +126,7 @@ def high_trend_lines(high_values: np.ndarray, lookback_freq: int, dont_look_freq
 @cython.boundscheck(False)
 @cython.wraparound(False)
 def low_trend_lines(low_values: np.ndarray, lookback_freq: int, dont_look_freq: int):
-    low = np.pad(low,((lookback_freq - 1, 0)), constant_values=np.nan)
+    low_values = np.pad(low_values,((lookback_freq - 1, 0)), constant_values=np.nan)
     values = np.empty(len(low_values), dtype=np.float64)
     cdef np.ndarray[np.float64_t] low_trend
 
