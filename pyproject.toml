@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=59.6.0", "wheel", "Cython==3.0.7", "numpy==1.21.4"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cython_trend_lines"
+authors = [{name = "Mohammad Ghoddosi", email = "mohamadqodosi1996@gmail.com"}]
+version = "1.0.0"
+description = "Python package for cythonized implementation of finding trend lines"
+readme = "README.md"
+requires-python = ">=3.9.5"
+dependencies = [
+    "requests"
+]
+
+
+[project.urls]
+Homepage = "https://github.com/mohamad-qodosi/cython_trend_lines"
+Issues = "https://github.com/mohamad-qodosi/cython_trend_lines/issues"
